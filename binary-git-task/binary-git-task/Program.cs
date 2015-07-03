@@ -10,9 +10,18 @@ namespace binary_git_task
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter number for calculations:");
-            int num = Console.Read();
-            Console.WriteLine("Sine of {0} is {1}", num, Math.Sin(num));
+            Console.WriteLine("Type an integer:");
+            string line = Console.ReadLine();
+            double value;
+            if (double.TryParse(line, out value))
+            {
+                Console.WriteLine("Sine of {0} is {1:##.00000}", value, Math.Sin(Math.PI * value / 180));
+            }
+            else
+            {
+                Console.WriteLine("Not an integer!");
+            }
+            Console.ReadKey();
         }
     }
 }
