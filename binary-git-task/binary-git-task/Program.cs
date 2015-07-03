@@ -10,7 +10,7 @@ namespace binary_git_task
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Type an integer:");
+            Console.WriteLine("Type an double:");
             string line = Console.ReadLine();
             double value;
             if (double.TryParse(line, out value))
@@ -19,7 +19,7 @@ namespace binary_git_task
             }
             else
             {
-                Console.WriteLine("Not an integer!");
+                Console.WriteLine("Not an double!");
             }
             Console.ReadKey();
         }
