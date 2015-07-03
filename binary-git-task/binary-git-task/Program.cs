@@ -10,31 +10,39 @@ namespace binary_git_task
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Type an double for sine:");
-            string line = Console.ReadLine();
-            double value;
-            if (double.TryParse(line, out value))
+            while (true)
             {
-                Console.WriteLine("Sine of {0} is {1:##.00000}", value, Math.Sin(Math.PI * value / 180));
+                Console.WriteLine("Type an double for sine:");
+                var line = Console.ReadLine();
+                double value;
+                if (double.TryParse(line, out value))
+                {
+                    Console.WriteLine("Sine of {0} is {1:##.00000}", value, Math.Sin(Math.PI * value / 180));
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Not an double!");
+                }
             }
-            else
-            {
-                Console.WriteLine("Not an double!");
-            }
-            Console.ReadKey();
 
-            Console.WriteLine("\n\rType an integer for factorial:");
-            line = Console.ReadLine(); // Read string from console
-            int intVal;
-            if (int.TryParse(line, out intVal))
+            while (true)
             {
-                Console.WriteLine("Sine of {0} is {1}", intVal, Factorial(intVal));
+                Console.WriteLine("\n\rType an integer for factorial:");
+                var line = Console.ReadLine(); // Read string from console
+                int intVal;
+                if (int.TryParse(line, out intVal))
+                {
+                    Console.WriteLine("Sine of {0} is {1}", intVal, Factorial(intVal));
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Not an integer!");
+                }
             }
-            else
-            {
-                Console.WriteLine("Not an integer!");
-            }
-            line = Console.ReadLine(); // Read string from console
+
+            Console.ReadKey();
         }
 
         static int Factorial(int x)
