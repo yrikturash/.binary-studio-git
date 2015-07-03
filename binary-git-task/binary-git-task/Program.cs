@@ -24,6 +24,19 @@ namespace binary_git_task
                 Console.WriteLine("Not an double!");
             }
             Console.ReadKey();
+
+            Console.WriteLine("\n\rType an int:");
+            line = Console.ReadLine();
+            int factVal;
+            if (int.TryParse(line, out factVal))
+            {
+                Console.WriteLine("Sine of {0} is {1}", factVal, Factorial(factVal));
+            }
+            else
+            {
+                Console.WriteLine("Not an int!");
+            }
+            Console.ReadKey();
         }
     }
 }
