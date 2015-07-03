@@ -8,6 +8,8 @@ namespace binary_git_task
 {
     class Program
     {
+        static Func<int, int> Factorial = x => x < 0 ? -1 : x == 1 || x == 0 ? 1 : x * Factorial(x - 1);
+
         static void Main(string[] args)
         {
             Console.WriteLine("Type an double:");
